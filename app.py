@@ -1,20 +1,22 @@
 # IMPORT THE LIBRARIES
-import streamlit as st  # For creating the web app
-import numpy as np  # For numerical operations
-import datetime  # For date and time operations
-import pandas as pd  # For data manipulation
-import matplotlib.pyplot as plt  # For plotting graphs
-import plotly.express as px  # For interactive plots
-import yfinance as yf  # For fetching stock data
-from sklearn.preprocessing import MinMaxScaler  # For data scaling
-import plotly.graph_objects as go  # For creating more complex plots
-import tensorflow as tf  # For deep learning models
-keras = tf.keras  # Keras interface within TensorFlow
-from keras.models import load_model  # For loading pre-trained models
+import os
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
+import streamlit as st
+import numpy as np
+import datetime
+import pandas as pd
+import matplotlib.pyplot as plt
+import plotly.express as px
+import yfinance as yf
+from sklearn.preprocessing import MinMaxScaler
+import plotly.graph_objects as go
+import tensorflow as tf
+from keras.models import load_model
 import warnings 
-warnings.filterwarnings("ignore")  # To ignore warnings
-
+keras = tf.keras
+warnings.filterwarnings("ignore")
 st.sidebar.title("Stock Price Prediction System")  # Sidebar title for the web app
 
 print('\n')  # Print a newline for better readability in console
